@@ -15,3 +15,5 @@ Idea is from <https://superuser.com/a/1183480/1747454>.
 ```
 ps2pdf -dPDFSETTINGS=/ebook source.pdf compressed.pdf
 ```
+
+You mustn't use the same filename for the source and the copressed files
