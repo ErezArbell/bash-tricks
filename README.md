@@ -57,3 +57,10 @@ All those line will do the same
 awk 'match($0,/The number is [0-9]+/) {print substr($0,RSTART+14,RLENGTH-14);exit}' file.txt
 awk 'match($0,/The number is ([0-9]+)/,m) {print m[1];exit}' file.txt
 ```
+
+### Check open ports
+
+```
+sudo lsof -i :80 -i :443
+sudo apt install -y net-tools
+sudo netstat -plan
