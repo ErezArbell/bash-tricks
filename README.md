@@ -64,3 +64,13 @@ awk 'match($0,/The number is ([0-9]+)/,m) {print m[1];exit}' file.txt
 sudo lsof -i :80 -i :443
 sudo apt install -y net-tools
 sudo netstat -plan
+```
+
+### Run script as root at startup
+
+Create the script in `/etc/init.d/scriptname.sh`
+
+```
+chmod 755 /etc/init.d/scriptname.sh
+ln -s /etc/init.d/scriptname.sh /etc/rc2.d/S99scriptname.sh
+```
